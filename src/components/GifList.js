@@ -4,14 +4,14 @@ import GifListContainer from './GifListContainer'
 function GifList ({ gifs }) {
 
     const gifList = gifs.map(gif => {
-        return gif.images.original.url
+        return <li><img src={gif.images.original.url}/></li>
+        
     })
-    console.log(gifList)
-
 
     return (
         <ul>
-            <li>
+            {gifList}
+            {/* <li>
                 <img src={gifList[0]}/>
             </li>
             <li>
@@ -19,7 +19,7 @@ function GifList ({ gifs }) {
             </li>
             <li>
                 <img src={gifList[2]}/>
-            </li>
+            </li> */}
         </ul>
     )
 }
